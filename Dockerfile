@@ -9,4 +9,4 @@ ENTRYPOINT exec java $JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -jar /ap
 # 端口
 EXPOSE 8082
 #健康检查
-HEALTHCHECK --start-period=60s --interval=5s --timeout=5s CMD curl --fail http://localhost:8080/health || exit 1
+HEALTHCHECK --start-period=60s --interval=5s --timeout=5s CMD curl --fail http://localhost:8082/health || exit 1
